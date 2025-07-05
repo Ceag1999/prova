@@ -1,44 +1,98 @@
-header {
-    text-align: center;
-    background-color: rgb(55, 138, 163);
-    padding: 30px;
-}
-h1 {
-    font-size: 30px;
-    font-weight: bold;
+    body {
+      font-family: Arial, sans-serif;
+      background-image: linear-gradient(to bottom right, #2A8E9B, #1A4F5F);
+      padding: 20px;
+      overflow-x: hidden;
+    }
 
-}
-main {
-    background-color: rgb(27, 77, 134);
-    text-align: center;
-    padding: 30px;
-    margin: 0 auto;
-}
-h2 {
-    padding-bottom: 20px;
-    font-size: 20px;
-    font-weight: bold;
-}
-a{
-    text-decoration: none;
-    text-transform: uppercase;
-    color: black;
-}
-li {
-    padding: 10px;
-    margin: 10px auto;
-    background-color: rgb(55, 138, 163);
-    width: 30%;
-    border-radius: 10px;
-    color: black;
-}
-li:hover {
-    width: 33%;
-    background-color: rgb(103, 145, 236);
-}
-footer {
-    background-color: rgb(55, 138, 163);
-    text-align: center;
-    padding: 20px 0 30px 0;
-}
+    h1 {
+      text-align: center;
+      color: white;
+    }
 
+    .formulario, .times {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 2;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .time {
+      margin-top: 20px;
+      padding: 10px;
+      background: #ecf0f1;
+      border-left: 5px solid #3498db;
+      border-radius: 5px;
+    }
+
+    .time h2 {
+      margin: 0;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .jogadores {
+      margin-top: 10px;
+      padding-left: 10px;
+    }
+
+    .jogadores p {
+      text-transform: lowercase;
+      margin: 4px 0;
+    }
+
+    .alerta {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .bola {
+      position: fixed;
+      width: 32px;
+      height: 32px;
+      background-image: url(https://cdn-icons-png.flaticon.com/256/53/53283.png); /* ícone de bola de futebol */
+      background-size: cover;
+      animation: cair 6s linear forwards;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes cair {
+      0% {
+        top: -40px;
+        opacity: 1;
+      }
+      100% {
+        top: 100vh;
+        opacity: 0;
+      }
+    }
